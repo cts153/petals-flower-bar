@@ -1,0 +1,291 @@
+
+:root {
+  /* Color Palette */
+  --color-background: #F7FFF7; /* Mint Cream */
+  --color-primary: #E87EA1;    /* Petal Rouge */
+  --color-secondary: #3b6158;  /* Deep Teal */
+  --color-gold: #DB9A0B;       /* Harvest Gold */
+  --color-text: #591F0A;       /* Dark Walnut */
+
+  /* Typography */
+  --font-body: "Poppins", sans-serif;
+  --font-logo: "Dancing Script", cursive;
+}
+
+/* Dancing Script - Business Name */
+@font-face {
+  font-family: "Dancing Script";
+  src: url("fonts/DancingScript-VariableFont_wght.ttf") format("truetype");
+  font-weight: 400 700;
+  font-style: normal;
+}
+
+/* Poppins - Regular */
+@font-face {
+  font-family: "Poppins";
+  src: url("fonts/Poppins-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Poppins - Medium */
+@font-face {
+  font-family: "Poppins";
+  src: url("fonts/Poppins-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Poppins - Bold */
+@font-face {
+  font-family: "Poppins";
+  src: url("fonts/Poppins-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Global Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-weight: 400;
+}
+
+h1 {
+  font-family: var(--font-logo);
+  font-weight: 700;
+  color: var(--color-secondary);
+}
+
+h2, h3 {
+  font-family: var(--font-body);
+  font-weight: 700;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Header Content */
+
+/* Header Background */
+
+.site-header {
+  min-height: 85vh;
+  position: relative;
+
+  background-image:
+    linear-gradient(
+      rgba(247, 255, 247, 0.55),
+      rgba(247, 255, 247, 0.55)
+    ),
+    url("photos/arrangement_1.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.header-content {
+  min-height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 2rem;
+}
+
+.header-branding {
+  text-align: center;
+}
+
+.header-branding h1 {
+  font-size: clamp(4rem, 10vw, 8rem);
+  line-height: 1.1;
+  margin: 0;
+}
+
+.header-tagline {
+  font-size: clamp(1.25rem, 3vw, 2rem);
+  font-weight: 500;
+  color: var(--color-text);
+  margin: 1.5rem 0 0;
+}
+
+/* Facebook Icon */
+
+.facebook-link {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.facebook-icon {
+  width: 36px;
+  height: 36px;
+}
+
+/* Header - Mobile */
+@media (max-width: 768px) {
+  .site-header {
+    min-height: 80vh;
+    background-position: center;
+  }
+
+  .header-content {
+    min-height: 80vh;
+    padding: 5rem 1.5rem;
+  }
+
+  .header-branding h1 {
+    font-size: clamp(3.5rem, 12vw, 5rem);
+  }
+
+  .header-tagline {
+    font-size: 1.25rem;
+  }
+
+  .facebook-link {
+    top: 1.5rem;
+    right: 1.5rem;
+  }
+}
+
+/* about section */
+.about-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 3rem;
+  padding: 4rem 2rem;
+  background: linear-gradient(
+    to bottom,
+    #d6e4d6 50%,
+    #F7FFF7 100%
+  );
+}
+
+.about-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.about-content {
+  border: 2px solid var(--color-primary);
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.about-description {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* About Section - Mobile */
+@media (max-width: 768px) {
+  .about-description {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 3rem 1.5rem;
+  }
+}
+
+/* Hours and Contact Section */
+
+.hours-contact-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 4rem 2rem;
+}
+
+.hours-container,
+.contact-container {
+  border: 2px solid var(--color-gold);
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+/* Hours and Contact - Mobile */
+
+@media (max-width: 768px) {
+  .hours-contact-section {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 3rem 1.5rem;
+  }
+}
+
+/* Opening Hours */
+
+.hours-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.hours-row span:last-child {
+  text-align: right;
+}
+
+
+/* Contact Links */
+
+.location-text a,
+.phone-info a,
+.email-info a {
+  color: var(--color-secondary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.location-text a:hover,
+.phone-info a:hover,
+.email-info a:hover {
+  color: var(--color-primary);
+}
+
+
+/* Footer */
+
+.site-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.footer-text-slogan {
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.footer-text-copyright {
+  font-size: 0.875rem;
+  margin: 0;
+}
